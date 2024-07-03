@@ -1,5 +1,7 @@
 .env
 
+*.csv
+
 # Python
 *.pyc
 __pycache__/

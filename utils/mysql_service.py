@@ -2,6 +2,10 @@ import os
 import MySQLdb
 import csv
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 DATABASES = {
     "mysql": {
@@ -13,6 +17,7 @@ DATABASES = {
         "PORT": os.environ.get("PORT"),
     },
 }
+print(f"DATABASES: {DATABASES}")
 
 def get_mysql_connection():
     db_settings = DATABASES["mysql"]

@@ -1,8 +1,18 @@
+import os
 import MySQLdb
 import csv
 from datetime import datetime, timedelta
 
-
+DATABASES = {
+    "mysql": {
+        "ENGINE": os.environ.get("ENGINE"),
+        "NAME": os.environ.get("NAME"),
+        "USER": os.environ.get("USER"),
+        "PASSWORD": os.environ.get("PASSWORD"),
+        "HOST": os.environ.get("HOST"),
+        "PORT": os.environ.get("PORT"),
+    },
+}
 
 def get_mysql_connection():
     db_settings = DATABASES["mysql"]

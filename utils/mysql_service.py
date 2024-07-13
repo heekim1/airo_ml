@@ -9,12 +9,12 @@ load_dotenv()
 
 DATABASES = {
     "mysql": {
-        "ENGINE": os.environ.get("ENGINE"),
-        "NAME": os.environ.get("NAME"),
-        "USER": os.environ.get("USER"),
-        "PASSWORD": os.environ.get("PASSWORD"),
-        "HOST": os.environ.get("HOST"),
-        "PORT": os.environ.get("PORT"),
+        "ENGINE": os.environ.get("DB_ENGINE"),
+        "NAME": os.environ.get("SQL_NAME"),
+        "USER": os.environ.get("SQL_USER"),
+        "PASSWORD": os.environ.get("SQL_PASSWORD"),
+        "HOST": os.environ.get("SQL_HOST"),
+        "PORT": os.environ.get("SQL_PORT"),
     },
 }
 print(f"DATABASES: {DATABASES}")
@@ -59,11 +59,11 @@ def retrieve_data_and_write_csv():
     connection = get_mysql_connection()
     cursor = connection.cursor()
 
-    with open('imei_data_last_month.csv', 'w', newline='') as csvfile:
-        fieldnames = ['imei', 'sound_db', 'noise_db', 'breath_rate', 'heart_rate', 'temperature', 'humedity', 'dt_cr']
-        writer = csv.writer(csvfile)
-        
-        writer.writerow(fieldnames)
+    # Create a CSV for all data
+    with open('imei_data_comprehensive.csv', 'w', newline='') as csvfile_all:
+        fieldnames = ['imei', 'sound_db', 'noise_db', 'breath_rate', 'heart_rate', 'temperature', 'humedity', 'dt_cr', 'time_in_minutes']
+        writer_all = csv.writer(csvfile_all)
+        writer_all.writerow(fieldnames)
 
         for device in devices:
             # Get the latest date for the current IMEI
@@ -76,9 +76,9 @@ def retrieve_data_and_write_csv():
             latest_date_result = cursor.fetchone()
             if latest_date_result and latest_date_result[0]:
                 latest_date = latest_date_result[0]
-                one_month_ago = latest_date - timedelta(days=30)
-                
-                # Retrieve data for the last month for the current IMEI
+                start_date = datetime(latest_date.year, 7, 1)  # Start date is July 1st
+
+                # Retrieve data for the date range from July 1st to the latest date
                 query_data = """
                     SELECT 
                         sound_db, 
@@ -91,15 +91,28 @@ def retrieve_data_and_write_csv():
                     FROM 
                         airo_message
                     WHERE 
-                        imei = %s AND dt_cr >= %s
+                        imei = %s AND dt_cr BETWEEN %s AND %s
                 """
-                cursor.execute(query_data, (device.imei, one_month_ago))
+                cursor.execute(query_data, (device.imei, start_date, latest_date))
                 rows = cursor.fetchall()
 
-                # Write rows to CSV directly
-                for row in rows:
-                    writer.writerow([device.imei] + list(row))
+                # Create a CSV for the individual device
+                with open(f'{device.imei}_data_july_to_latest.csv', 'w', newline='') as csvfile_individual:
+                    writer_individual = csv.writer(csvfile_individual)
+                    writer_individual.writerow(fieldnames)
 
+                    for row in rows:
+                        dt_cr = row[6]
+                        time_in_minutes = dt_cr.hour * 60 + dt_cr.minute
+                        row_with_time = [device.imei] + list(row) + [time_in_minutes]
+                        
+                        # Write to individual CSV
+                        writer_individual.writerow(row_with_time)
+                        
+                        # Write to the all-inclusive CSV
+                        writer_all.writerow(row_with_time)
+
+    cursor.close()
     connection.close()
 
 # Call the function to retrieve data and write to CSV

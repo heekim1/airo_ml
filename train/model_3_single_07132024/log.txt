@@ -1,0 +1,570 @@
+(airo-ml)  hkim75  ~/Airo/airo_ml/train   master ±  python train_anomalies_single_device.py
+TensorFlow version: 2.17.0
+Num GPUs Available:  0
+Physical Devices: [PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU')]
+GPU is not available. Training will use CPU.
+Training models for 883543430497535 ...
+Testing batch size: 32
+Train Isolation Forest
+Model saved to /Users/hkim75/Airo/airo_ml/train/model_3_single_07132024/isolation_forest_model_883543430497535_32.pkl
+Train Autoencoder
+Epoch 1/12
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 5s 238us/step - loss: 0.6868 - val_loss: 0.2034
+Epoch 2/12
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 5s 237us/step - loss: 0.6555 - val_loss: 0.2031
+Epoch 3/12
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 5s 239us/step - loss: 0.6555 - val_loss: 0.2031
+Epoch 4/12
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 5s 240us/step - loss: 0.6544 - val_loss: 0.2031
+Epoch 5/12
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 5s 240us/step - loss: 0.6574 - val_loss: 0.2031
+Epoch 6/12
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 5s 236us/step - loss: 0.6550 - val_loss: 0.2030
+Epoch 7/12
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 5s 236us/step - loss: 0.6544 - val_loss: 0.2028
+Epoch 8/12
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 5s 238us/step - loss: 0.6579 - val_loss: 0.2030
+Epoch 9/12
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 5s 238us/step - loss: 0.6585 - val_loss: 0.2028
+Epoch 10/12
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 5s 239us/step - loss: 0.6547 - val_loss: 0.2023
+Epoch 11/12
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 5s 241us/step - loss: 0.6565 - val_loss: 0.2017
+Epoch 12/12
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 5s 242us/step - loss: 0.6538 - val_loss: 0.2016
+Autoencoder - Batch Size: 32, Loss: 0.6551376581192017, Val Loss: 0.2016386240720749
+Train LSTM-based model for time-series data
+Epoch 1/12
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 31s 1ms/step - loss: 0.0487 - val_loss: 6.1457e-04
+Epoch 2/12
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 30s 1ms/step - loss: 4.5943e-04 - val_loss: 4.0393e-04
+Epoch 3/12
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 30s 1ms/step - loss: 3.0540e-04 - val_loss: 3.4711e-04
+Epoch 4/12
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 31s 1ms/step - loss: 2.2553e-04 - val_loss: 3.4188e-04
+Epoch 5/12
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 30s 1ms/step - loss: 1.9822e-04 - val_loss: 5.4747e-04
+Epoch 6/12
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 30s 1ms/step - loss: 1.8450e-04 - val_loss: 4.1361e-04
+Epoch 7/12
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 29s 1ms/step - loss: 1.4010e-04 - val_loss: 5.3650e-04
+LSTM Autoencoder - Batch Size: 32, Loss: 0.00013856000441592187, Val Loss: 0.0005364969256334007
+Training models for 701225054386494 ...
+Testing batch size: 32
+Train Isolation Forest
+Model saved to /Users/hkim75/Airo/airo_ml/train/model_3_single_07132024/isolation_forest_model_701225054386494_32.pkl
+Train Autoencoder
+Epoch 1/12
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 5s 262us/step - loss: 0.6707 - val_loss: 0.4290
+Epoch 2/12
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 5s 260us/step - loss: 0.6273 - val_loss: 0.4287
+Epoch 3/12
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 5s 260us/step - loss: 0.6241 - val_loss: 0.4286
+Epoch 4/12
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 5s 260us/step - loss: 0.6287 - val_loss: 0.4283
+Epoch 5/12
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 5s 259us/step - loss: 0.6243 - val_loss: 0.4279
+Epoch 6/12
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 5s 258us/step - loss: 0.6279 - val_loss: 0.4275
+Epoch 7/12
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 5s 259us/step - loss: 0.6308 - val_loss: 0.4273
+Epoch 8/12
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 5s 258us/step - loss: 0.6289 - val_loss: 0.4272
+Epoch 9/12
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 5s 257us/step - loss: 0.6294 - val_loss: 0.4272
+Epoch 10/12
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 5s 258us/step - loss: 0.6273 - val_loss: 0.4271
+Epoch 11/12
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 5s 258us/step - loss: 0.6255 - val_loss: 0.4272
+Epoch 12/12
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 5s 258us/step - loss: 0.6266 - val_loss: 0.4272
+Autoencoder - Batch Size: 32, Loss: 0.6261197328567505, Val Loss: 0.42722252011299133
+Train LSTM-based model for time-series data
+Epoch 1/12
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 30s 2ms/step - loss: 0.0583 - val_loss: 6.1865e-04
+Epoch 2/12
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 28s 1ms/step - loss: 5.4636e-04 - val_loss: 4.6461e-04
+Epoch 3/12
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 29s 2ms/step - loss: 3.1979e-04 - val_loss: 0.0010
+Epoch 4/12
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 2.4860e-04 - val_loss: 8.7289e-04
+Epoch 5/12
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 27s 1ms/step - loss: 2.0141e-04 - val_loss: 9.5574e-04
+LSTM Autoencoder - Batch Size: 32, Loss: 0.00019482147763483226, Val Loss: 0.0009557437151670456
+Training models for 683921756065543 ...
+Testing batch size: 32
+Train Isolation Forest
+Model saved to /Users/hkim75/Airo/airo_ml/train/model_3_single_07132024/isolation_forest_model_683921756065543_32.pkl
+Train Autoencoder
+Epoch 1/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 5s 247us/step - loss: 0.6024 - val_loss: 0.3723
+Epoch 2/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 5s 243us/step - loss: 0.5601 - val_loss: 0.3721
+Epoch 3/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 5s 242us/step - loss: 0.5595 - val_loss: 0.3721
+Epoch 4/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 5s 243us/step - loss: 0.5599 - val_loss: 0.3721
+Epoch 5/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 5s 242us/step - loss: 0.5586 - val_loss: 0.3719
+Epoch 6/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 5s 242us/step - loss: 0.5605 - val_loss: 0.3719
+Epoch 7/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 5s 243us/step - loss: 0.5598 - val_loss: 0.3717
+Epoch 8/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 5s 243us/step - loss: 0.5616 - val_loss: 0.3716
+Epoch 9/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 5s 244us/step - loss: 0.5600 - val_loss: 0.3717
+Epoch 10/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 5s 244us/step - loss: 0.5597 - val_loss: 0.3717
+Epoch 11/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 5s 244us/step - loss: 0.5602 - val_loss: 0.3717
+Autoencoder - Batch Size: 32, Loss: 0.5601263046264648, Val Loss: 0.37169814109802246
+Train LSTM-based model for time-series data
+Epoch 1/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 24s 1ms/step - loss: 0.0526 - val_loss: 1.8010e-04
+Epoch 2/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 24s 1ms/step - loss: 1.8117e-04 - val_loss: 7.8689e-05
+Epoch 3/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 24s 1ms/step - loss: 1.2096e-04 - val_loss: 3.3579e-04
+Epoch 4/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 23s 1ms/step - loss: 9.8475e-05 - val_loss: 1.3790e-04
+Epoch 5/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 24s 1ms/step - loss: 8.7200e-05 - val_loss: 3.2319e-05
+Epoch 6/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 23s 1ms/step - loss: 7.2635e-05 - val_loss: 5.6445e-05
+Epoch 7/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 24s 1ms/step - loss: 7.4321e-05 - val_loss: 2.6361e-05
+Epoch 8/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 23s 1ms/step - loss: 6.2125e-05 - val_loss: 3.4730e-05
+Epoch 9/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 24s 1ms/step - loss: 5.5275e-05 - val_loss: 8.7626e-05
+Epoch 10/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 23s 1ms/step - loss: 5.1431e-05 - val_loss: 2.4257e-05
+Epoch 11/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 23s 1ms/step - loss: 4.6543e-05 - val_loss: 2.3020e-05
+Epoch 12/12
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 23s 1ms/step - loss: 4.4031e-05 - val_loss: 2.2811e-05
+LSTM Autoencoder - Batch Size: 32, Loss: 4.4090698793297634e-05, Val Loss: 2.2810652808402665e-05
+Training models for 605338565118998 ...
+Testing batch size: 32
+Train Isolation Forest
+Model saved to /Users/hkim75/Airo/airo_ml/train/model_3_single_07132024/isolation_forest_model_605338565118998_32.pkl
+Train Autoencoder
+Epoch 1/12
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 5s 254us/step - loss: 0.6011 - val_loss: 0.3496
+Epoch 2/12
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 5s 251us/step - loss: 0.5602 - val_loss: 0.3497
+Epoch 3/12
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 5s 250us/step - loss: 0.5591 - val_loss: 0.3496
+Epoch 4/12
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 5s 251us/step - loss: 0.5572 - val_loss: 0.3495
+Epoch 5/12
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 5s 251us/step - loss: 0.5591 - val_loss: 0.3495
+Epoch 6/12
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 5s 250us/step - loss: 0.5587 - val_loss: 0.3520
+Epoch 7/12
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 5s 250us/step - loss: 0.5588 - val_loss: 0.3512
+Epoch 8/12
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 5s 250us/step - loss: 0.5576 - val_loss: 0.3561
+Autoencoder - Batch Size: 32, Loss: 0.5592160820960999, Val Loss: 0.3561181128025055
+Train LSTM-based model for time-series data
+Epoch 1/12
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 28s 1ms/step - loss: 0.0527 - val_loss: 3.7362e-04
+Epoch 2/12
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 2.0866e-04 - val_loss: 5.2201e-04
+Epoch 3/12
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 1.4022e-04 - val_loss: 4.4539e-04
+Epoch 4/12
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 1.1580e-04 - val_loss: 2.9982e-04
+Epoch 5/12
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 27s 1ms/step - loss: 9.7644e-05 - val_loss: 2.4547e-04
+Epoch 6/12
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 8.6079e-05 - val_loss: 2.1226e-04
+Epoch 7/12
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 7.6025e-05 - val_loss: 1.0655e-04
+Epoch 8/12
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 7.3584e-05 - val_loss: 1.5004e-04
+Epoch 9/12
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 6.7968e-05 - val_loss: 2.3515e-04
+Epoch 10/12
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 6.1471e-05 - val_loss: 1.1489e-04
+LSTM Autoencoder - Batch Size: 32, Loss: 6.114561983849853e-05, Val Loss: 0.00011489307507872581
+Training models for 486186400836117 ...
+Testing batch size: 32
+Train Isolation Forest
+Model saved to /Users/hkim75/Airo/airo_ml/train/model_3_single_07132024/isolation_forest_model_486186400836117_32.pkl
+Train Autoencoder
+Epoch 1/12
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 5s 254us/step - loss: 0.6139 - val_loss: 0.4321
+Epoch 2/12
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 5s 254us/step - loss: 0.5646 - val_loss: 0.4319
+Epoch 3/12
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 5s 253us/step - loss: 0.5651 - val_loss: 0.4317
+Epoch 4/12
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 5s 254us/step - loss: 0.5653 - val_loss: 0.4318
+Epoch 5/12
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 5s 253us/step - loss: 0.5652 - val_loss: 0.4323
+Epoch 6/12
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 5s 253us/step - loss: 0.5650 - val_loss: 0.4320
+Autoencoder - Batch Size: 32, Loss: 0.5654907822608948, Val Loss: 0.4319661259651184
+Train LSTM-based model for time-series data
+Epoch 1/12
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 30s 2ms/step - loss: 0.0652 - val_loss: 4.2929e-04
+Epoch 2/12
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 2.0246e-04 - val_loss: 1.3409e-04
+Epoch 3/12
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 1.2347e-04 - val_loss: 1.2945e-04
+Epoch 4/12
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 1.0857e-04 - val_loss: 1.2889e-04
+Epoch 5/12
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 9.7761e-05 - val_loss: 1.0635e-04
+Epoch 6/12
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 8.2940e-05 - val_loss: 6.8443e-05
+Epoch 7/12
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 7.4851e-05 - val_loss: 7.0694e-05
+Epoch 8/12
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 6.2871e-05 - val_loss: 4.9918e-05
+Epoch 9/12
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 5.7687e-05 - val_loss: 5.0944e-05
+Epoch 10/12
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 5.3311e-05 - val_loss: 5.7337e-05
+Epoch 11/12
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 4.9131e-05 - val_loss: 6.1496e-05
+LSTM Autoencoder - Batch Size: 32, Loss: 5.0241564167663455e-05, Val Loss: 6.149572436697781e-05
+Training models for 463819615518786 ...
+Testing batch size: 32
+Train Isolation Forest
+Model saved to /Users/hkim75/Airo/airo_ml/train/model_3_single_07132024/isolation_forest_model_463819615518786_32.pkl
+Train Autoencoder
+Epoch 1/12
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 5s 254us/step - loss: 0.4538 - val_loss: 0.3082
+Epoch 2/12
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 5s 254us/step - loss: 0.4271 - val_loss: 0.3081
+Epoch 3/12
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 5s 255us/step - loss: 0.4260 - val_loss: 0.3080
+Epoch 4/12
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 5s 255us/step - loss: 0.4265 - val_loss: 0.3080
+Epoch 5/12
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 5s 256us/step - loss: 0.4263 - val_loss: 0.3079
+Epoch 6/12
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 5s 255us/step - loss: 0.4269 - val_loss: 0.3079
+Epoch 7/12
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 5s 255us/step - loss: 0.4262 - val_loss: 0.3079
+Epoch 8/12
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 5s 255us/step - loss: 0.4264 - val_loss: 0.3079
+Epoch 9/12
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 5s 257us/step - loss: 0.4267 - val_loss: 0.3079
+Epoch 10/12
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 5s 257us/step - loss: 0.4266 - val_loss: 0.3079
+Autoencoder - Batch Size: 32, Loss: 0.4262651205062866, Val Loss: 0.3079245388507843
+Train LSTM-based model for time-series data
+Epoch 1/12
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 28s 1ms/step - loss: 0.0441 - val_loss: 5.8840e-04
+Epoch 2/12
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 1.3688e-04 - val_loss: 3.4068e-04
+Epoch 3/12
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 9.5189e-05 - val_loss: 3.2122e-04
+Epoch 4/12
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 7.5941e-05 - val_loss: 3.8230e-04
+Epoch 5/12
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 5.7985e-05 - val_loss: 2.5190e-04
+Epoch 6/12
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 5.3075e-05 - val_loss: 1.8537e-04
+Epoch 7/12
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 4.5507e-05 - val_loss: 1.1944e-04
+Epoch 8/12
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 4.5509e-05 - val_loss: 1.8456e-04
+Epoch 9/12
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 4.0460e-05 - val_loss: 1.1993e-04
+Epoch 10/12
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 3.6278e-05 - val_loss: 2.2662e-04
+LSTM Autoencoder - Batch Size: 32, Loss: 3.637988629634492e-05, Val Loss: 0.00022662179253529757
+Training models for 460671778886265 ...
+Testing batch size: 32
+Train Isolation Forest
+Model saved to /Users/hkim75/Airo/airo_ml/train/model_3_single_07132024/isolation_forest_model_460671778886265_32.pkl
+Train Autoencoder
+Epoch 1/12
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 5s 259us/step - loss: 0.6212 - val_loss: 0.2317
+Epoch 2/12
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 5s 257us/step - loss: 0.5857 - val_loss: 0.2321
+Epoch 3/12
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 5s 257us/step - loss: 0.5834 - val_loss: 0.2322
+Epoch 4/12
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 5s 256us/step - loss: 0.5796 - val_loss: 0.2320
+Autoencoder - Batch Size: 32, Loss: 0.5799351334571838, Val Loss: 0.23199017345905304
+Train LSTM-based model for time-series data
+Epoch 1/12
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 27s 1ms/step - loss: 0.0569 - val_loss: 4.2864e-04
+Epoch 2/12
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 1.5922e-04 - val_loss: 3.0597e-04
+Epoch 3/12
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 1.0509e-04 - val_loss: 1.3291e-04
+Epoch 4/12
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 8.9464e-05 - val_loss: 1.1497e-04
+Epoch 5/12
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 7.4827e-05 - val_loss: 1.4350e-04
+Epoch 6/12
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 6.5477e-05 - val_loss: 1.7252e-04
+Epoch 7/12
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 6.4671e-05 - val_loss: 7.7570e-05
+Epoch 8/12
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 5.4757e-05 - val_loss: 5.9324e-05
+Epoch 9/12
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 4.8559e-05 - val_loss: 1.8132e-04
+Epoch 10/12
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 4.5854e-05 - val_loss: 7.2680e-05
+Epoch 11/12
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 4.3724e-05 - val_loss: 1.0398e-04
+LSTM Autoencoder - Batch Size: 32, Loss: 4.356883800937794e-05, Val Loss: 0.0001039834096445702
+Training models for 353365188064688 ...
+Testing batch size: 32
+Train Isolation Forest
+Model saved to /Users/hkim75/Airo/airo_ml/train/model_3_single_07132024/isolation_forest_model_353365188064688_32.pkl
+Train Autoencoder
+Epoch 1/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 5s 261us/step - loss: 0.5875 - val_loss: 0.3625
+Epoch 2/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 5s 259us/step - loss: 0.5410 - val_loss: 0.3623
+Epoch 3/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 5s 258us/step - loss: 0.5407 - val_loss: 0.3623
+Epoch 4/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 5s 258us/step - loss: 0.5407 - val_loss: 0.3623
+Epoch 5/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 5s 258us/step - loss: 0.5405 - val_loss: 0.3623
+Epoch 6/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 5s 258us/step - loss: 0.5395 - val_loss: 0.3624
+Epoch 7/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 5s 258us/step - loss: 0.5405 - val_loss: 0.3623
+Epoch 8/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 5s 258us/step - loss: 0.5400 - val_loss: 0.3622
+Epoch 9/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 5s 257us/step - loss: 0.5406 - val_loss: 0.3622
+Epoch 10/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 5s 261us/step - loss: 0.5399 - val_loss: 0.3622
+Epoch 11/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 5s 258us/step - loss: 0.5399 - val_loss: 0.3621
+Epoch 12/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 5s 257us/step - loss: 0.5396 - val_loss: 0.3620
+Autoencoder - Batch Size: 32, Loss: 0.5400163531303406, Val Loss: 0.3619688153266907
+Train LSTM-based model for time-series data
+Epoch 1/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 29s 1ms/step - loss: 0.0520 - val_loss: 4.8574e-04
+Epoch 2/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 27s 1ms/step - loss: 1.5209e-04 - val_loss: 2.8299e-04
+Epoch 3/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 1.1911e-04 - val_loss: 1.9872e-04
+Epoch 4/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 8.5958e-05 - val_loss: 1.0569e-04
+Epoch 5/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 28s 1ms/step - loss: 7.3083e-05 - val_loss: 1.1180e-04
+Epoch 6/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 6.5109e-05 - val_loss: 1.7631e-04
+Epoch 7/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 27s 1ms/step - loss: 6.1546e-05 - val_loss: 8.3875e-05
+Epoch 8/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 5.0855e-05 - val_loss: 9.0403e-05
+Epoch 9/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 4.9498e-05 - val_loss: 5.7969e-05
+Epoch 10/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 29s 2ms/step - loss: 4.7967e-05 - val_loss: 5.3395e-05
+Epoch 11/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 4.5235e-05 - val_loss: 4.6251e-05
+Epoch 12/12
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 4.2383e-05 - val_loss: 6.3781e-05
+LSTM Autoencoder - Batch Size: 32, Loss: 4.1645449528004974e-05, Val Loss: 6.378089892677963e-05
+Training models for 159556169560848 ...
+Testing batch size: 32
+Train Isolation Forest
+Model saved to /Users/hkim75/Airo/airo_ml/train/model_3_single_07132024/isolation_forest_model_159556169560848_32.pkl
+Train Autoencoder
+Epoch 1/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 4s 255us/step - loss: 0.6471 - val_loss: 0.6355
+Epoch 2/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 4s 252us/step - loss: 0.5917 - val_loss: 0.6342
+Epoch 3/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 4s 252us/step - loss: 0.5933 - val_loss: 0.6339
+Epoch 4/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 4s 253us/step - loss: 0.5913 - val_loss: 0.6337
+Epoch 5/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 4s 252us/step - loss: 0.5925 - val_loss: 0.6337
+Epoch 6/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 4s 250us/step - loss: 0.5899 - val_loss: 0.6336
+Epoch 7/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 4s 252us/step - loss: 0.5919 - val_loss: 0.6336
+Epoch 8/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 4s 251us/step - loss: 0.5905 - val_loss: 0.6335
+Epoch 9/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 4s 251us/step - loss: 0.5901 - val_loss: 0.6335
+Epoch 10/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 4s 251us/step - loss: 0.5916 - val_loss: 0.6336
+Epoch 11/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 4s 251us/step - loss: 0.5898 - val_loss: 0.6336
+Epoch 12/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 4s 251us/step - loss: 0.5909 - val_loss: 0.6336
+Autoencoder - Batch Size: 32, Loss: 0.5906727313995361, Val Loss: 0.6335532665252686
+Train LSTM-based model for time-series data
+Epoch 1/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 20s 1ms/step - loss: 0.0566 - val_loss: 2.8561e-04
+Epoch 2/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 19s 1ms/step - loss: 1.7760e-04 - val_loss: 2.9515e-04
+Epoch 3/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 19s 1ms/step - loss: 1.5555e-04 - val_loss: 3.0173e-04
+Epoch 4/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 19s 1ms/step - loss: 1.2835e-04 - val_loss: 1.1577e-04
+Epoch 5/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 19s 1ms/step - loss: 9.8946e-05 - val_loss: 1.8859e-04
+Epoch 6/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 19s 1ms/step - loss: 8.1353e-05 - val_loss: 8.0534e-05
+Epoch 7/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 19s 1ms/step - loss: 7.3629e-05 - val_loss: 1.5067e-04
+Epoch 8/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 19s 1ms/step - loss: 6.9398e-05 - val_loss: 6.5797e-05
+Epoch 9/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 19s 1ms/step - loss: 5.9456e-05 - val_loss: 7.7270e-05
+Epoch 10/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 19s 1ms/step - loss: 5.7753e-05 - val_loss: 6.1689e-05
+Epoch 11/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 19s 1ms/step - loss: 5.6866e-05 - val_loss: 7.9419e-05
+Epoch 12/12
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 19s 1ms/step - loss: 4.8938e-05 - val_loss: 7.9334e-05
+LSTM Autoencoder - Batch Size: 32, Loss: 4.8614841944072396e-05, Val Loss: 7.933422602945939e-05
+Training models for 148526548115987 ...
+Testing batch size: 32
+Train Isolation Forest
+Model saved to /Users/hkim75/Airo/airo_ml/train/model_3_single_07132024/isolation_forest_model_148526548115987_32.pkl
+Train Autoencoder
+Epoch 1/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 5s 260us/step - loss: 0.6199 - val_loss: 0.4392
+Epoch 2/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 5s 257us/step - loss: 0.5706 - val_loss: 0.4389
+Epoch 3/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 5s 257us/step - loss: 0.5708 - val_loss: 0.4388
+Epoch 4/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 5s 258us/step - loss: 0.5708 - val_loss: 0.4388
+Epoch 5/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 5s 258us/step - loss: 0.5732 - val_loss: 0.4388
+Epoch 6/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 5s 258us/step - loss: 0.5697 - val_loss: 0.4387
+Epoch 7/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 5s 257us/step - loss: 0.5706 - val_loss: 0.4388
+Epoch 8/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 5s 258us/step - loss: 0.5710 - val_loss: 0.4389
+Epoch 9/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 5s 257us/step - loss: 0.5712 - val_loss: 0.4380
+Epoch 10/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 5s 264us/step - loss: 0.5710 - val_loss: 0.4380
+Epoch 11/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 5s 264us/step - loss: 0.5708 - val_loss: 0.4379
+Epoch 12/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 5s 261us/step - loss: 0.5708 - val_loss: 0.4381
+Autoencoder - Batch Size: 32, Loss: 0.5706257224082947, Val Loss: 0.43811315298080444
+Train LSTM-based model for time-series data
+Epoch 1/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 27s 1ms/step - loss: 0.0575 - val_loss: 8.6542e-04
+Epoch 2/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 2.5377e-04 - val_loss: 7.1964e-04
+Epoch 3/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 1.8747e-04 - val_loss: 3.4049e-04
+Epoch 4/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 27s 1ms/step - loss: 1.4522e-04 - val_loss: 2.9127e-04
+Epoch 5/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 28s 1ms/step - loss: 1.1665e-04 - val_loss: 1.6053e-04
+Epoch 6/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 27s 1ms/step - loss: 1.0745e-04 - val_loss: 1.4041e-04
+Epoch 7/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 27s 1ms/step - loss: 8.9631e-05 - val_loss: 1.4769e-04
+Epoch 8/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 27s 1ms/step - loss: 8.1801e-05 - val_loss: 1.0530e-04
+Epoch 9/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 29s 2ms/step - loss: 7.9156e-05 - val_loss: 1.8423e-04
+Epoch 10/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 27s 1ms/step - loss: 7.2071e-05 - val_loss: 6.3132e-05
+Epoch 11/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 28s 1ms/step - loss: 6.7457e-05 - val_loss: 7.7359e-05
+Epoch 12/12
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 29s 2ms/step - loss: 6.3303e-05 - val_loss: 7.8598e-05
+LSTM Autoencoder - Batch Size: 32, Loss: 6.256366759771481e-05, Val Loss: 7.859802281018347e-05
+Training models for 117425803428623 ...
+Testing batch size: 32
+Train Isolation Forest
+Model saved to /Users/hkim75/Airo/airo_ml/train/model_3_single_07132024/isolation_forest_model_117425803428623_32.pkl
+Train Autoencoder
+Epoch 1/12
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 38ms/step - loss: 0.9145 - val_loss: 1.0083
+Epoch 2/12
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 7ms/step - loss: 0.9243 - val_loss: 1.0082
+Epoch 3/12
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 6ms/step - loss: 0.9122 - val_loss: 1.0081
+Epoch 4/12
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 6ms/step - loss: 0.9222 - val_loss: 1.0080
+Epoch 5/12
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 6ms/step - loss: 0.9057 - val_loss: 1.0078
+Epoch 6/12
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 6ms/step - loss: 0.8856 - val_loss: 1.0074
+Epoch 7/12
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 6ms/step - loss: 0.9005 - val_loss: 1.0071
+Epoch 8/12
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 6ms/step - loss: 0.8992 - val_loss: 1.0068
+Epoch 9/12
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 6ms/step - loss: 0.8787 - val_loss: 1.0066
+Epoch 10/12
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 6ms/step - loss: 0.8896 - val_loss: 1.0063
+Epoch 11/12
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 6ms/step - loss: 0.8843 - val_loss: 1.0061
+Epoch 12/12
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 6ms/step - loss: 0.8837 - val_loss: 1.0059
+Autoencoder - Batch Size: 32, Loss: 0.875800371170044, Val Loss: 1.0058834552764893
+Train LSTM-based model for time-series data
+Epoch 1/12
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 166ms/step - loss: 0.6491 - val_loss: 1.0432
+Epoch 2/12
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 9ms/step - loss: 0.6828 - val_loss: 1.0441
+Epoch 3/12
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 10ms/step - loss: 0.6836 - val_loss: 1.0464
+Epoch 4/12
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 9ms/step - loss: 0.6836 - val_loss: 1.0490
+LSTM Autoencoder - Batch Size: 32, Loss: 0.6772717237472534, Val Loss: 1.0490124225616455
+Training models for 108691961563855 ...
+Testing batch size: 32
+Train Isolation Forest
+Model saved to /Users/hkim75/Airo/airo_ml/train/model_3_single_07132024/isolation_forest_model_108691961563855_32.pkl
+Train Autoencoder
+Epoch 1/12
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 5s 257us/step - loss: 0.6058 - val_loss: 0.5309
+Epoch 2/12
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 5s 254us/step - loss: 0.5630 - val_loss: 0.5305
+Epoch 3/12
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 5s 254us/step - loss: 0.5639 - val_loss: 0.5306
+Epoch 4/12
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 5s 254us/step - loss: 0.5628 - val_loss: 0.5305
+Epoch 5/12
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 5s 255us/step - loss: 0.5617 - val_loss: 0.5306
+Autoencoder - Batch Size: 32, Loss: 0.5625249743461609, Val Loss: 0.5305804014205933
+Train LSTM-based model for time-series data
+Epoch 1/12
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 27s 1ms/step - loss: 0.0485 - val_loss: 0.0012
+Epoch 2/12
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 1.8093e-04 - val_loss: 6.2481e-04
+Epoch 3/12
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 1.2563e-04 - val_loss: 4.8685e-04
+Epoch 4/12
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 1.0376e-04 - val_loss: 5.6280e-04
+Epoch 5/12
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 8.7029e-05 - val_loss: 3.8894e-04
+Epoch 6/12
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 8.4618e-05 - val_loss: 5.0391e-04
+Epoch 7/12
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 6.8505e-05 - val_loss: 5.2551e-04
+Epoch 8/12
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 26s 1ms/step - loss: 7.0976e-05 - val_loss: 3.3533e-04
+Epoch 9/12
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 5.9134e-05 - val_loss: 3.5999e-04
+Epoch 10/12
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 5.2833e-05 - val_loss: 2.6796e-04
+Epoch 11/12
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 5.6182e-05 - val_loss: 2.4429e-04
+Epoch 12/12
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 25s 1ms/step - loss: 5.0945e-05 - val_loss: 2.8597e-04
+LSTM Autoencoder - Batch Size: 32, Loss: 4.925390749122016e-05, Val Loss: 0.0002859667001757771
+(airo-ml)  hkim75  ~/Airo/airo_ml/train   master 

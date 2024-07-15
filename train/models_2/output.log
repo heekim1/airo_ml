@@ -1,0 +1,336 @@
+Successfully installed protobuf-4.25.3
+(apple_tf)  hkim75  ~/Airo/airo_ml/train   master ±  python train_anomalies_single_device.py
+TensorFlow version: 2.17.0
+Num GPUs Available:  1
+Physical Devices: [PhysicalDevice(name='/physical_device:CPU:0', device_type='CPU'), PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
+GPU is available and will be used for training.
+training 883543430497535 ...
+Testing batch size: 32
+Train Isolation Forest
+Train One-Class SVM
+Train Autoencoder
+2024-07-13 23:39:15.167082: I metal_plugin/src/device/metal_device.cc:1154] Metal device set to: Apple M3 Pro
+2024-07-13 23:39:15.167103: I metal_plugin/src/device/metal_device.cc:296] systemMemory: 18.00 GB
+2024-07-13 23:39:15.167107: I metal_plugin/src/device/metal_device.cc:313] maxCacheSize: 6.00 GB
+2024-07-13 23:39:15.167120: I tensorflow/core/common_runtime/pluggable_device/pluggable_device_factory.cc:305] Could not identify NUMA node of platform GPU ID 0, defaulting to 0. Your kernel may not have been built with NUMA support.
+2024-07-13 23:39:15.167130: I tensorflow/core/common_runtime/pluggable_device/pluggable_device_factory.cc:271] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 0 MB memory) -> physical PluggableDevice (device: 0, name: METAL, pci bus id: <undefined>)
+Epoch 1/10
+2024-07-13 23:39:15.613344: I tensorflow/core/grappler/optimizers/custom_graph_optimizer_registry.cc:117] Plugin optimizer for device_type GPU is enabled.
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 100s 5ms/step - loss: 0.6867 - val_loss: 0.2027
+Epoch 2/10
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 97s 4ms/step - loss: 0.6574 - val_loss: 0.2024
+Epoch 3/10
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 96s 4ms/step - loss: 0.6549 - val_loss: 0.2024
+Epoch 4/10
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 95s 4ms/step - loss: 0.6535 - val_loss: 0.2025
+Epoch 5/10
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 96s 4ms/step - loss: 0.6552 - val_loss: 0.2026
+Epoch 6/10
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 96s 4ms/step - loss: 0.6560 - val_loss: 0.2029
+Epoch 7/10
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 98s 4ms/step - loss: 0.6544 - val_loss: 0.2029
+Epoch 8/10
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 98s 4ms/step - loss: 0.6595 - val_loss: 0.2029
+Epoch 9/10
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 98s 4ms/step - loss: 0.6572 - val_loss: 0.2025
+Epoch 10/10
+21987/21987 ━━━━━━━━━━━━━━━━━━━━ 98s 4ms/step - loss: 0.6560 - val_loss: 0.2026
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Autoencoder - Batch Size: 32, Loss: 0.6552608013153076, Val Loss: 0.20260944962501526
+training 701225054386494 ...
+Testing batch size: 32
+Train Isolation Forest
+Train One-Class SVM
+Train Autoencoder
+Epoch 1/10
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.6787 - val_loss: 0.4279
+Epoch 2/10
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.6362 - val_loss: 0.4280
+Epoch 3/10
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.6323 - val_loss: 0.4277
+Epoch 4/10
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 94s 5ms/step - loss: 0.6309 - val_loss: 0.4279
+Epoch 5/10
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.6322 - val_loss: 0.4277
+Epoch 6/10
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 94s 5ms/step - loss: 0.6289 - val_loss: 0.4278
+Epoch 7/10
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 94s 5ms/step - loss: 0.6303 - val_loss: 0.4277
+Epoch 8/10
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.6362 - val_loss: 0.4275
+Epoch 9/10
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.6308 - val_loss: 0.4277
+Epoch 10/10
+19034/19034 ━━━━━━━━━━━━━━━━━━━━ 94s 5ms/step - loss: 0.6323 - val_loss: 0.4278
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Autoencoder - Batch Size: 32, Loss: 0.6322089433670044, Val Loss: 0.42776650190353394
+training 683921756065543 ...
+Testing batch size: 32
+Train Isolation Forest
+Train One-Class SVM
+Train Autoencoder
+Epoch 1/10
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 85s 4ms/step - loss: 0.5990 - val_loss: 0.3711
+Epoch 2/10
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 86s 5ms/step - loss: 0.5559 - val_loss: 0.3707
+Epoch 3/10
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 86s 5ms/step - loss: 0.5559 - val_loss: 0.3705
+Epoch 4/10
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 85s 4ms/step - loss: 0.5552 - val_loss: 0.3705
+Epoch 5/10
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 86s 5ms/step - loss: 0.5560 - val_loss: 0.3705
+Epoch 6/10
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 86s 5ms/step - loss: 0.5553 - val_loss: 0.3706
+Epoch 7/10
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 86s 5ms/step - loss: 0.5580 - val_loss: 0.3701
+Epoch 8/10
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 86s 5ms/step - loss: 0.5564 - val_loss: 0.3700
+Epoch 9/10
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 86s 5ms/step - loss: 0.5569 - val_loss: 0.3700
+Epoch 10/10
+18999/18999 ━━━━━━━━━━━━━━━━━━━━ 86s 5ms/step - loss: 0.5558 - val_loss: 0.3700
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Autoencoder - Batch Size: 32, Loss: 0.5562800765037537, Val Loss: 0.3700108230113983
+training 605338565118998 ...
+Testing batch size: 32
+Train Isolation Forest
+Train One-Class SVM
+Train Autoencoder
+Epoch 1/10
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.6085 - val_loss: 0.3510
+Epoch 2/10
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5609 - val_loss: 0.3505
+Epoch 3/10
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5607 - val_loss: 0.3495
+Epoch 4/10
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.5590 - val_loss: 0.3495
+Epoch 5/10
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.5578 - val_loss: 0.3492
+Epoch 6/10
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5596 - val_loss: 0.3492
+Epoch 7/10
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5585 - val_loss: 0.3494
+Epoch 8/10
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5595 - val_loss: 0.3496
+Epoch 9/10
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5579 - val_loss: 0.3498
+Epoch 10/10
+19060/19060 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5594 - val_loss: 0.3497
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Autoencoder - Batch Size: 32, Loss: 0.5589188933372498, Val Loss: 0.34969618916511536
+training 486186400836117 ...
+Testing batch size: 32
+Train Isolation Forest
+Train One-Class SVM
+Train Autoencoder
+Epoch 1/10
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.6124 - val_loss: 0.4325
+Epoch 2/10
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.5619 - val_loss: 0.4326
+Epoch 3/10
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.5607 - val_loss: 0.4321
+Epoch 4/10
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.5607 - val_loss: 0.4317
+Epoch 5/10
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.5614 - val_loss: 0.4316
+Epoch 6/10
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5611 - val_loss: 0.4316
+Epoch 7/10
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5605 - val_loss: 0.4314
+Epoch 8/10
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5598 - val_loss: 0.4316
+Epoch 9/10
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5600 - val_loss: 0.4313
+Epoch 10/10
+19046/19046 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5615 - val_loss: 0.4314
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Autoencoder - Batch Size: 32, Loss: 0.5607820749282837, Val Loss: 0.43137747049331665
+training 463819615518786 ...
+Testing batch size: 32
+Train Isolation Forest
+Train One-Class SVM
+Train Autoencoder
+Epoch 1/10
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.4586 - val_loss: 0.3083
+Epoch 2/10
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.4265 - val_loss: 0.3081
+Epoch 3/10
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.4259 - val_loss: 0.3079
+Epoch 4/10
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.4270 - val_loss: 0.3079
+Epoch 5/10
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.4258 - val_loss: 0.3081
+Epoch 6/10
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.4255 - val_loss: 0.3081
+Epoch 7/10
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.4261 - val_loss: 0.3080
+Epoch 8/10
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.4256 - val_loss: 0.3082
+Epoch 9/10
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.4255 - val_loss: 0.3082
+Epoch 10/10
+19082/19082 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.4261 - val_loss: 0.3080
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Autoencoder - Batch Size: 32, Loss: 0.42592379450798035, Val Loss: 0.3080340027809143
+training 460671778886265 ...
+Testing batch size: 32
+Train Isolation Forest
+Train One-Class SVM
+Train Autoencoder
+Epoch 1/10
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.6287 - val_loss: 0.2328
+Epoch 2/10
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.5786 - val_loss: 0.2326
+Epoch 3/10
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.5782 - val_loss: 0.2325
+Epoch 4/10
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.5796 - val_loss: 0.2325
+Epoch 5/10
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5776 - val_loss: 0.2321
+Epoch 6/10
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 94s 5ms/step - loss: 0.5776 - val_loss: 0.2321
+Epoch 7/10
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5798 - val_loss: 0.2319
+Epoch 8/10
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5787 - val_loss: 0.2320
+Epoch 9/10
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5788 - val_loss: 0.2317
+Epoch 10/10
+19044/19044 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5779 - val_loss: 0.2317
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Autoencoder - Batch Size: 32, Loss: 0.5783147215843201, Val Loss: 0.23165272176265717
+training 353365188064688 ...
+Testing batch size: 32
+Train Isolation Forest
+Train One-Class SVM
+Train Autoencoder
+Epoch 1/10
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5887 - val_loss: 0.3620
+Epoch 2/10
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.5453 - val_loss: 0.3619
+Epoch 3/10
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.5459 - val_loss: 0.3621
+Epoch 4/10
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5456 - val_loss: 0.3622
+Epoch 5/10
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5459 - val_loss: 0.3623
+Epoch 6/10
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5454 - val_loss: 0.3622
+Epoch 7/10
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5462 - val_loss: 0.3623
+Epoch 8/10
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5450 - val_loss: 0.3622
+Epoch 9/10
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5449 - val_loss: 0.3623
+Epoch 10/10
+19050/19050 ━━━━━━━━━━━━━━━━━━━━ 95s 5ms/step - loss: 0.5446 - val_loss: 0.3623
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Autoencoder - Batch Size: 32, Loss: 0.5453709363937378, Val Loss: 0.36227673292160034
+training 159556169560848 ...
+Testing batch size: 32
+Train Isolation Forest
+Train One-Class SVM
+Train Autoencoder
+Epoch 1/10
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 71s 5ms/step - loss: 0.6454 - val_loss: 0.6349
+Epoch 2/10
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 71s 5ms/step - loss: 0.5910 - val_loss: 0.6347
+Epoch 3/10
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 71s 5ms/step - loss: 0.5908 - val_loss: 0.6343
+Epoch 4/10
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 71s 5ms/step - loss: 0.5908 - val_loss: 0.6342
+Epoch 5/10
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 71s 5ms/step - loss: 0.5900 - val_loss: 0.6342
+Epoch 6/10
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 70s 5ms/step - loss: 0.5893 - val_loss: 0.6341
+Epoch 7/10
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 70s 5ms/step - loss: 0.5917 - val_loss: 0.6339
+Epoch 8/10
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 70s 5ms/step - loss: 0.5897 - val_loss: 0.6340
+Epoch 9/10
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 71s 5ms/step - loss: 0.5900 - val_loss: 0.6339
+Epoch 10/10
+14015/14015 ━━━━━━━━━━━━━━━━━━━━ 70s 5ms/step - loss: 0.5903 - val_loss: 0.6339
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Autoencoder - Batch Size: 32, Loss: 0.5901945233345032, Val Loss: 0.6339095234870911
+training 148526548115987 ...
+Testing batch size: 32
+Train Isolation Forest
+Train One-Class SVM
+Train Autoencoder
+Epoch 1/10
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.6158 - val_loss: 0.4386
+Epoch 2/10
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 96s 5ms/step - loss: 0.5745 - val_loss: 0.4388
+Epoch 3/10
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 2150s 113ms/step - loss: 0.5745 - val_loss: 0.4387
+Epoch 4/10
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 1012s 53ms/step - loss: 0.5739 - val_loss: 0.4387
+Epoch 5/10
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 1107s 58ms/step - loss: 0.5734 - val_loss: 0.4388
+Epoch 6/10
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 1022s 54ms/step - loss: 0.5747 - val_loss: 0.4386
+Epoch 7/10
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 1069s 56ms/step - loss: 0.5731 - val_loss: 0.4386
+Epoch 8/10
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 994s 52ms/step - loss: 0.5738 - val_loss: 0.4387
+Epoch 9/10
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 86s 5ms/step - loss: 0.5732 - val_loss: 0.4386
+Epoch 10/10
+18993/18993 ━━━━━━━━━━━━━━━━━━━━ 1039s 55ms/step - loss: 0.5720 - val_loss: 0.4387
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Autoencoder - Batch Size: 32, Loss: 0.5712820291519165, Val Loss: 0.4387347102165222
+training 117425803428623 ...
+Testing batch size: 32
+Train Isolation Forest
+Train One-Class SVM
+Train Autoencoder
+Epoch 1/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 1s 109ms/step - loss: 0.9467 - val_loss: 1.1750
+Epoch 2/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 17ms/step - loss: 0.9484 - val_loss: 1.1702
+Epoch 3/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 16ms/step - loss: 0.9429 - val_loss: 1.1654
+Epoch 4/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 17ms/step - loss: 0.9392 - val_loss: 1.1601
+Epoch 5/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 14ms/step - loss: 0.9301 - val_loss: 1.1558
+Epoch 6/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 15ms/step - loss: 0.9402 - val_loss: 1.1515
+Epoch 7/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 15ms/step - loss: 0.9236 - val_loss: 1.1472
+Epoch 8/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 14ms/step - loss: 0.8997 - val_loss: 1.1430
+Epoch 9/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 14ms/step - loss: 0.9207 - val_loss: 1.1391
+Epoch 10/10
+2/2 ━━━━━━━━━━━━━━━━━━━━ 0s 14ms/step - loss: 0.9260 - val_loss: 1.1357
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Autoencoder - Batch Size: 32, Loss: 0.9152703881263733, Val Loss: 1.1356638669967651
+training 108691961563855 ...
+Testing batch size: 32
+Train Isolation Forest
+Train One-Class SVM
+Train Autoencoder
+Epoch 1/10
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 1013s 53ms/step - loss: 0.6112 - val_loss: 0.5309
+Epoch 2/10
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 87s 5ms/step - loss: 0.5625 - val_loss: 0.5308
+Epoch 3/10
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 265s 14ms/step - loss: 0.5616 - val_loss: 0.5308
+Epoch 4/10
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 1071s 56ms/step - loss: 0.5622 - val_loss: 0.5306
+Epoch 5/10
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 87s 5ms/step - loss: 0.5639 - val_loss: 0.5306
+Epoch 6/10
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 985s 52ms/step - loss: 0.5623 - val_loss: 0.5306
+Epoch 7/10
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 1072s 56ms/step - loss: 0.5630 - val_loss: 0.5305
+Epoch 8/10
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 87s 5ms/step - loss: 0.5617 - val_loss: 0.5305
+Epoch 9/10
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 446s 23ms/step - loss: 0.5623 - val_loss: 0.5306
+Epoch 10/10
+18996/18996 ━━━━━━━━━━━━━━━━━━━━ 87s 5ms/step - loss: 0.5624 - val_loss: 0.5305
+WARNING:absl:You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`.
+Autoencoder - Batch Size: 32, Loss: 0.5622352361679077, Val Loss: 0.5305472612380981

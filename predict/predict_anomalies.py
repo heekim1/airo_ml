@@ -100,23 +100,40 @@ def get_feature_contributions(model, X, method='mean'):
 
 # Load models and predict anomalies for each device
 def load_models_and_predict_anomalies():
-    devices = airo_device.get_all()
-
-    model_root = "/Users/heeshinkim/Desktop/Airosolution/ml/train"
-    isolation_forest_model = IsolationForestModel()
-    isolation_forest_model.load(file_path=f'{model_root}/isolation_forest_model.pkl')
-
-    one_class_svm_model = OneClassSVMModel()
-    one_class_svm_model.load(file_path=f'{model_root}/one_class_svm_model.pkl')
-
-    autoencoder_model = AutoencoderModel(input_dim=7)
-    autoencoder_model.load(file_path=f'{model_root}/autoencoder_model.h5')
-
-    lstm_autoencoder_model = LSTMAutoencoderModel(input_shape=(20, 7))
-    lstm_autoencoder_model.load(file_path=f'{model_root}/lstm_autoencoder_model.h5')
-
+    #devices = airo_device.get_all()
+    devices = [
+        '883543430497535',
+        '701225054386494',
+        '683921756065543',
+        '605338565118998',
+        '486186400836117',
+        '463819615518786',
+        '460671778886265',
+        '353365188064688',
+        '159556169560848',
+        '148526548115987',
+        '117425803428623',
+        '108691961563855',
+    ]
+    batch_size=32
 
     for device in devices:
+
+        model_root = "/Users/hkim75/Airo/airo_ml/train/model_3_single_07132024"
+        isolation_forest_model = IsolationForestModel()
+        isolation_forest_model.load(file_path=f'{model_root}/isolation_forest_model_{device}_{batch_size}.pkl')
+
+        one_class_svm_model = OneClassSVMModel()
+        one_class_svm_model.load(file_path=f'{model_root}/one_class_svm_model_{device}_{batch_size}.pkl')
+
+        autoencoder_model = AutoencoderModel(input_dim=7)
+        autoencoder_model.load(file_path=f'{model_root}/autoencoder_model_{device}_{batch_size}.h5')
+
+        lstm_autoencoder_model = LSTMAutoencoderModel(input_shape=(20, 7))
+        lstm_autoencoder_model.load(file_path=f'{model_root}/lstm_autoencoder_model_{device}_{batch_size}.h5')
+
+
+
         rows = get_latest_20_data(device.imei)
         if len(rows) < 20:
             print(f"Not enough data for device {device.imei}")

@@ -41,11 +41,13 @@ requests==2.32.3
 rich==13.7.1
 scikit-learn==1.5.1
 scipy==1.13.1
-six==1.16.0
+six @ file:///tmp/build/80754af9/six_1644875935023/work
 tensorboard==2.17.0
 tensorboard-data-server==0.7.2
 tensorflow==2.17.0
 tensorflow-io-gcs-filesystem==0.37.1
+tensorflow-macos==2.16.2
+tensorflow-metal==1.1.0
 termcolor==2.4.0
 threadpoolctl==3.5.0
 typing_extensions==4.12.2

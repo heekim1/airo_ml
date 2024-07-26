@@ -92,6 +92,8 @@ def retrieve_data_and_write_csv():
                         airo_message
                     WHERE 
                         imei = %s AND dt_cr BETWEEN %s AND %s
+                    ORDER BY 
+                        dt_cr ASC
                 """
                 cursor.execute(query_data, (device.imei, start_date, latest_date))
                 rows = cursor.fetchall()

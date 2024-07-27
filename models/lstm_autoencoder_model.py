@@ -146,9 +146,8 @@ if __name__ == "__main__":
         sequence_length = 20
 
         # Reshape data for LSTM model
-        #X_time_series = np.reshape(X_scaled, (X_scaled.shape[0], 1, X_scaled.shape[1]))
-        #input_shape = (X_time_series.shape[1], X_time_series.shape[2])
         X_sequences = create_sequences(X_scaled, sequence_length)
+        X_time_series = np.reshape(X_sequences, (X_sequences.shape[0], sequence_length, X_sequences.shape[2]))
         input_shape = (sequence_length, X_scaled.shape[1])
 
         # Initialize and train the LSTM autoencoder model
@@ -159,7 +158,7 @@ if __name__ == "__main__":
         model_out_dir = "/Users/heeshinkim/Desktop/Airosolution/ml/train/model_lstm_07252024"
 
         # Train the model
-        history = lstm_autoencoder.train(X_sequences, batch_size=batch_size, epochs=50, validation_split=0.2, cutoff_path=f'{model_out_dir}/{imeis_str}_{batch_size}_lstm_loss_cutoff.json')
+        history = lstm_autoencoder.train(X_time_series, batch_size=batch_size, epochs=50, validation_split=0.2, cutoff_path=f'{model_out_dir}/{imeis_str}_{batch_size}_lstm_loss_cutoff.json')
 
         # Save the trained model
         lstm_autoencoder.save_model(f'{model_out_dir}/lstm_autoencoder_model_{imeis_str}_{batch_size}.keras')

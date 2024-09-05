@@ -4,50 +4,39 @@ from tensorflow.keras.models import Sequential, load_model
 from tensorflow.keras.layers import Input, Dense, LSTM, RepeatVector, TimeDistributed
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import EarlyStopping
-from sklearn.preprocessing import StandardScaler
+
 import pandas as pd
-import json
+from sklearn.preprocessing import StandardScaler
+
 
 class LSTMAutoencoderModel:
-    def __init__(self, input_shape, learning_rate=0.001, patience=3, cutoff_path='loss_cutoff.json'):
+    def __init__(self, input_shape, learning_rate=0.001, patience=3):
         self.input_shape = input_shape
         self.learning_rate = learning_rate
         self.patience = patience
-        self.cutoff_path = cutoff_path
         self.model = self.build_model()
-        self.loss_cutoff = None
     
     def build_model(self):
-        model = Sequential([
-            Input(shape=self.input_shape),
-            LSTM(100, activation='relu', return_sequences=True),
-            LSTM(50, activation='relu', return_sequences=False),
-            RepeatVector(self.input_shape[0]),
-            LSTM(50, activation='relu', return_sequences=True),
-            LSTM(100, activation='relu', return_sequences=True),
-            TimeDistributed(Dense(self.input_shape[1]))
-        ])
-        optimizer = Adam(learning_rate=self.learning_rate, clipnorm=1.0)
-        model.compile(optimizer=optimizer, loss='mse')
+        model = Sequential()
+        model.add(Input(shape=self.input_shape))
+        model.add(LSTM(100, activation='relu', return_sequences=True))
+        model.add(LSTM(50, activation='relu', return_sequences=False))
+        model.add(RepeatVector(self.input_shape[0]))
+        model.add(LSTM(50, activation='relu', return_sequences=True))
+        model.add(LSTM(100, activation='relu', return_sequences=True))
+        model.add(TimeDistributed(Dense(self.input_shape[1])))
+        model.compile(optimizer=Adam(learning_rate=self.learning_rate), loss='mse')
         return model
     
-    def train(self, X_train, batch_size, epochs=12, validation_split=0.2, cutoff_path='loss_cutoff.json'):
+    def train(self, X_time_series, batch_size, epochs=50, validation_split=0.2):
         early_stopping_loss = EarlyStopping(monitor='loss', patience=self.patience, restore_best_weights=True)
         early_stopping_val_loss = EarlyStopping(monitor='val_loss', patience=self.patience, restore_best_weights=True)
-        
         history = self.model.fit(
-            X_train, X_train,
-            epochs=epochs, 
-            batch_size=batch_size,
-            validation_split=validation_split,
-            verbose=1,
+            X_time_series, X_time_series,
+            epochs=epochs, batch_size=batch_size,
+            validation_split=validation_split, verbose=1,
             callbacks=[early_stopping_loss, early_stopping_val_loss]
         )
-        
-        train_mse = self.evaluate_loss(X_train)
-        self.loss_cutoff = self.determine_loss_cutoff(train_mse, percentile=95)
-        self.save_loss_cutoff(cutoff_path)
-        
         return history
     
     def save_model(self, file_path):
@@ -56,22 +45,16 @@ class LSTMAutoencoderModel:
     def load_model(self, file_path):
         self.model = load_model(file_path)
     
-    def save_loss_cutoff(self, cutoff_path):
-        with open(cutoff_path, 'w') as f:
-            json.dump({'loss_cutoff': self.loss_cutoff}, f)
-    
-    def load_loss_cutoff(self, cutoff_path):
-        with open(cutoff_path, 'r') as f:
-            data = json.load(f)
-            self.loss_cutoff = data['loss_cutoff']
-    
-    def predict(self, X):
-        if self.loss_cutoff is None:
-            raise ValueError("Loss cutoff not set. Please load or create the loss cutoff before prediction.")
+    def predict(self, X, loss_cutoff=None, percentile=95):
         reconstructions = self.model.predict(X)
+        reconstruction_errors = reconstruction_errors = np.abs(X - reconstructions)
         mse = np.mean(np.power(X - reconstructions, 2), axis=(1, 2))
-        anomalies = mse > self.loss_cutoff
-        return anomalies, mse
+        
+        if loss_cutoff is None:
+            loss_cutoff = self.determine_loss_cutoff(mse, percentile)
+        
+        anomalies = mse > loss_cutoff
+        return anomalies, reconstruction_errors, mse
     
     def evaluate_loss(self, X):
         reconstructions = self.model.predict(X)

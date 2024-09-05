@@ -31,7 +31,7 @@ def parse_imei_data(file_path):
     return overall_averages, grouped_averages
 
 def main():
-    file_path = '/Users/heeshinkim/Desktop/Airosolution/ml/data/imei_data_btw_july_1st_july_15_2024.csv'
+    file_path = '/Users/heeshinkim/Desktop/Airosolution/ml/data/imei_data_btw_july_1st_july_25_2024.csv'
     overall_averages, grouped_averages = parse_imei_data(file_path)
     
     print("Overall Averages:")

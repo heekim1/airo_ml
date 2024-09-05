@@ -1,0 +1,13 @@
+# Ignore the .env file
+.env
+
+# Ignore __pycache__ directories
+__pycache__/
+*.pyc
+
+*/.DS_Store
+
+# You can also ignore other files or directories if needed
+.git
+node_modules
+dist
